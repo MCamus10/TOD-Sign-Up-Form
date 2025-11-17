@@ -26,31 +26,31 @@
                 <div class="form-row">
                     <div class="field">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name"/>
+                        <input type="text" id="first-name" name="first-name" maxlength="20"/>
                     </div>
                     <div class="field">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name"/>
+                        <input type="text" id="last-name" name="last-name" maxlength="20 " required/>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="field">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email"/>
+                        <input type="email" id="email" name="email" required/>
                     </div>
                     <div class="field">
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="phone"/>
+                        <input type="tel" id="phone" name="phone" maxlength="20" required/>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="field">
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password"/>
+                        <input type="password" id="password" name="password" minlength="5" maxlength="12" required/>
                     </div>
                     <div class="field">
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password"  id="confirm-password" name="confirm-password"/>
+                        <input type="password"  id="confirm-password" name="confirm-password" maxlength="12" minlength="5" required/>
                     </div>
                 </div>
             </form>
@@ -58,5 +58,21 @@
         <button type="submit" form="sign-in-form">Create Account</button>
         <h3>Already have an account? <a href="" id="log-in">Log in</a></h3>
     </div>
+<script>
+    const pass = document.querySelector("#password");
+    const passValidation = document.querySelector("#confirm-password");
+    function passwordValidation (){
+        console.log("funcion activada")
+        const passValue = pass.value;
+        const confirmValue = passValidation.value; 
+        if (passValue !== confirmValue && confirmValue.length > 0){
+           alert("Las contraseñas no coinciden")
+           return false
+        } else {
+            return true
+        }
+    }
+    passValidation.addEventListener("blur", passwordValidation)
+</script>
 </body>
 </html>
