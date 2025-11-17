@@ -13,17 +13,16 @@
         <div id="img-container">
             <img src="./images/insung-yoon-djPI6C0i7ag-unsplash.jpg" alt="nature image"/>
         </div>
-        <div class="center-image">
-            <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"/>
-            <div id="shadow-box"></div>
+        <div id="central-image">
+            <img id="tod-image" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"/>
         </div>
-        <h4>Photo by <a href="https://unsplash.com/@insungpandora" target="_blank" rel="noreferrer" >Insung Yoon</a> on <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a></h4>
+        <h4 id="photo-credit">Photo by <a href="https://unsplash.com/@insungpandora" target="_blank" rel="noreferrer" >Insung Yoon</a> on <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a></h4>
     </div>
     <div id="right-container">
         <h1>Welcome! Please sign-up to use our services</h1>
         <div id="form-box">
             <h2>Enter the following information:</h2>
-            <form>
+            <form id="sign-in-form" action="/submit">
                 <label for="first-name">FIRST NAME</label>
                 <input type="text" id="first-name" name="first-name"/>
                 <label for="last-name">LAST NAME</label>
@@ -36,9 +35,9 @@
                 <input type="password" id="password" name="password"/>
                 <label for="confirm-password">CONFIRM PASSWORD</label>
                 <input type="password"  id="confirm-password" name="confirm-password"/>
-                <button type="submit">Create Account</button>
             </form>
         </div>
+        <button type="submit" form="sign-in-form">Create Account</button>
         <h3>Already have an account? <a href="" id="log-in">Log in</a></h3>
     </div>
 </body>
