@@ -20,8 +20,7 @@ body {
     display: flex;
     max-width: 800px;
     margin:auto;
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: black;
 
 }
 
@@ -31,7 +30,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     width: 300px;
-    height: 500px;
+    height: 100vh;
     
 }
 
@@ -70,31 +69,25 @@ body {
     z-index: 10;
     margin: 5px auto;
     color: azure;
+    text-align: center;
 }
 
 #photo-credit a {
     color: rgb(68, 100, 100);
 }
 
-button {
-    background-color: var(--btn-color);
-    color: white;
-    border-radius: 5px;
-    border: none;
-    height: 2.2em;
-    width: 150px;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
 #right-container {
     max-width: 500px;
- 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    background-color: white;
 }
 
 #form-box {
-    box-shadow: 0 0 8px 2px rgb(150, 149, 149);
+    box-shadow: 
+        0 4px 5px rgb(150, 149, 149),
+        0 -4px 5px rgb(150, 149, 149);
     background-color: rgb(255, 255, 255);
    
     padding: 5px 0px 20px 15px;
@@ -102,4 +95,63 @@ button {
 
 h1, h3 {
     margin-left: 20px
+}
+
+input:invalid {
+    border: 1px solid var(--invalid-color);
+    outline: none;
+    box-shadow: 0 0 2px 1px var(--invalid-color);
+}
+
+input:focus {
+    border: 1px solid var(--focus-color);
+    outline: none;
+    box-shadow: 0 0 2px 1px var(--focus-color);
+}
+
+input {
+    border: 1px solid rgb(81, 81, 81);
+    border-radius: 3px;
+    height: 1.8em;
+    font-weight: 700;
+    font-size: 1.1em;
+    width: 200px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+
+}
+
+.form-row {
+    display: flex;
+}
+
+label {
+    font-weight: bold ;
+    font-size: 0.8em;
+    margin-bottom: 3px;
+    margin-top: 15px;
+    color: rgb(73, 73, 73);
+}
+
+button {
+    background-color: var(--btn-color);
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    height: 3em;
+    width: 180px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px 1px rgb(163, 163, 165);
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(63, 63, 174);
 }
